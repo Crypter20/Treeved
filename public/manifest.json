@@ -1,25 +1,27 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+  "manifest_version": 3,
+  "name": "TreeVed",
+  "version": "1.0.0",
+  "description": "Treeved",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "treeved16.ico",
+      "48": "treeved48.ico",
+      "128": "treeved128.ico"
     }
+  },
+  "icons": {
+    "16": "treeved16.ico",
+    "48": "treeved48.ico",
+    "128": "treeved128.ico"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background": {
+    "service workers": "../src/background.js"
+  }
 }
